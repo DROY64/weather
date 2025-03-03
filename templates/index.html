@@ -6,9 +6,9 @@
 <body>
     <h1>Weersvoorspelling</h1>
     <form action="/forecast" method="POST">
-        <!-- <label for="country">Selecteer een land:</label> -->
+        <label for="country">Selecteer een land:</label>
         <select name="country" class="form-control" id="country" required>
-            <option disabled hidden value="" label="Selecteer een land ... " selected="selected">Selecteer een land ... </option>
+            <option disabled hidden value="" label=" " selected="selected"> </option>
             <optgroup id="country-optgroup-Africa" label="Africa">
                 <option value="DZ" label="Algeria">Algeria</option>
                 <option value="AO" label="Angola">Angola</option>
@@ -273,7 +273,6 @@
             </optgroup>
         </select>
         <br>
-        <!-- !! Zorg ervoor dat je juiste naam gebruikt, want die heb je nodig in de code die je aanroept als je het formulier post.!! -->
         <label for="city">Selecteer een stad:</label>
         <input type="text" id="city" name="city" required><br><br>
         <input type="submit" value="Zoek weersvoorspelling">

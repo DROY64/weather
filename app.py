@@ -12,7 +12,7 @@ def forecast():
     country = request.form.get('country')
     city = request.form.get('city')
 
-    api_key = 'your_weather_api_key'  # Vervang dit met je eigen WeatherAPI-sleutel
+    api_key = 'e98333a54e1542afaa2230535250303'  # Vervang dit met je eigen WeatherAPI-sleutel
 
     url = f'http://api.weatherapi.com/v1/forecast.json?key={api_key}&q={city},{country}&days=3'
 
