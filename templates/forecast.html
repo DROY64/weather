@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weersvoorspelling</title>
+</head>
+<body>
+    <h1>Weersvoorspelling voor {{ city }}, {{ country }}</h1>
+    <table>
+        <tr>
+            <th>Datum</th>
+            <th>Min Temperatuur</th>
+            <th>Max Temperatuur</th>
+            <th>Weersomstandigheden</th>
+        </tr>
+        {% for day in forecast_days %}
+            <tr>
+                <td>{{ day['date'] }}</td>
+                <td>{{ day['day']['mintemp_c'] }}°C</td>
+                <td>{{ day['day']['maxtemp_c'] }}°C</td>
+                <td>{{ day['day']['condition']['text'] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
