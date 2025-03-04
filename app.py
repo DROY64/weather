@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-import requests
+import requests, pandas
 
 app = Flask(__name__)
 
@@ -20,6 +20,10 @@ def forecast():
     data = response.json()
 
     forecast_days = data['forecast']['forecastday']
+    
+    for wday in forecast_days:
+        
+        wday['date']=pandas.Timestamp(wday['date'])
 
     return render_template('forecast.html', country=country, city=city, forecast_days=forecast_days)
 
